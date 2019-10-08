@@ -27,6 +27,7 @@ class Polygon {
     
 }
 
+
 class Square extends Polygon {
 
     get isValid() {
