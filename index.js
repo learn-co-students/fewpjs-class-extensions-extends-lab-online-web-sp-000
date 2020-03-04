@@ -12,9 +12,7 @@ class Polygon {
     get perimeter() {
         let count = 0
 
-        this.sides.forEach(function(element){
-            count += element
-        })
+        this.sides.forEach((element) => count+=element)
 
         return count
     }
