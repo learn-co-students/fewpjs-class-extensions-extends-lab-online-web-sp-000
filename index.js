@@ -29,16 +29,16 @@ class Triangle extends Polygon {
 class Square extends Polygon {
   get isValid() {
     let sidesArray = this.sides
-    let singleValue = sidesArray[0]
-    let isSquare = (currentValue) => currentValue === singleValue
+    let singleSide = sidesArray[0]
+    let isSquare = (currentSide) => currentSide === singleSide
     let valid = sidesArray.every(isSquare)
     return valid
   }
 
   get area() {
     let sidesArray = this.sides
-    let singleValue = sidesArray[0]
-    let area = singleValue ** 2
+    let singleSide = sidesArray[0]
+    let area = singleSide ** 2
     return area
   }
 }
