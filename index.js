@@ -25,7 +25,7 @@ class Triangle extends Polygon {
 class Square extends Polygon {
   get isValid() {
     const sameSides = this.sides.filter( x => x === this.sides[0])
-    return sameSides.length === 4 ? true : false
+    return this.sides[0] > 0 && sameSides.length === 4 ? true : false
   }
 
   get area() {
