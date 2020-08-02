@@ -1,7 +1,7 @@
 class Polygon {
     constructor(sides) {
       this.sides = sides
-      this.count = this.sides.length
+    //   this.count = this.sides.length
     }
   
     get countSides() {
@@ -29,11 +29,16 @@ class Polygon {
       return ((side1 + side2 > side3) && (side1 + side3 > side2) && (side2 + side3 > side1))
     }
   }
-  
+
   class Square extends Polygon {
   
     get isValid() {
-      if (!Array.isArray(this.sides)) return;
+        debugger
+
+      if (!Array.isArray(this.sides)) {
+          console.log("am I hitting this")
+          return;
+        }
       if (this.count !== 4) return;
       let side1 = this.sides[0]
       let side2 = this.sides[1]
@@ -48,3 +53,13 @@ class Polygon {
       return this.sides[0] * this.sides[0]
     }
   }
+
+  console.log('blank', Square.isValid())
+
+  //how do I console log a method inside a class
+  //how do I console log an if statement such as this - if (!Array.isArray(this.sides)) return;
+
+
+
+
+
