@@ -18,12 +18,17 @@ class Polygon {
 
 class Triangle extends Polygon {
     get isValid(){
-        if( this.sides[0] + this.sides[1] > this.sides[2] &&
-            this.sides[1] + this.sides[2] > this.sides[0] &&
-            this.sides[2] + this.sides[0] > this.sides[1] )
-        { return true;
-        } else {
-         return false; }
+        // console.log(this.countSides)
+        if(this.countSides === 3)
+           { if( this.sides[0] + this.sides[1] > this.sides[2] &&
+                this.sides[1] + this.sides[2] > this.sides[0] &&
+                this.sides[2] + this.sides[0] > this.sides[1] )
+            {   return true;
+            } else {
+                return false; }
+           } else {
+            return false;
+        }
     }
 }
 
