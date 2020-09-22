@@ -15,14 +15,13 @@ class Polygon {
 
 class Triangle extends Polygon {
   get isValid() {
-    return this.sides.reduce(function (num1, num2, num3) {
-      if (!num1 || !num2 || !num3) {
-        return false;
-      }
-      const con1 = num1 + num2 > num3;
-      const con2 = num2 + num3 > num1;
-      const con3 = num3 + num1 > num2;
-      return true;
-    });
+    if (this.sides[1] + this.sides[2] < this.sides[0]) {
+      return false;
+    } else if (this.sides[0] + this.sides[2] < this.sides[1]) {
+      return false;
+    } else if (this.sides[0] + this.sides[1] < this.sides[2]) {
+      return false;
+    }
+    return true;
   }
 }
