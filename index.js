@@ -17,5 +17,8 @@ class Triangle extends Polygon {
   get isValid() {
     let triangle1 = this.sides;
     let triangle2 = this.sides;
+    for (i < 0; i < this.sides.length; i++) {
+      if (triangle1 + triangle2 > this.sides) return;
+    }
   }
 }
