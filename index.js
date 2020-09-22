@@ -12,3 +12,10 @@ class Polygon {
     });
   }
 }
+
+class Triangle extends Polygon {
+  get isValid() {
+    return this.sides.map(function(triangle1, triangle2){
+      
+    })
+}
