@@ -25,3 +25,15 @@ class Triangle extends Polygon {
     return true;
   }
 }
+
+class Square extends Polygon {
+  get isValid() {
+    if (this.sides[0] === this.sides[1] && this.sides[2] && this.sides[3]) {
+      return true;
+    }
+    return false;
+  }
+  get area() {
+    return this.sides[0] * this.sides[0];
+  }
+}
