@@ -1,1 +1,14 @@
-// Your code here
+class Polygon {
+  constructor(sides) {
+    this.sides = sides;
+  }
+  get countSides() {
+    return this.sides.length;
+  }
+
+  get perimeter() {
+    return this.sides.reduce(function (num1, num2) {
+      return num1 + num2;
+    });
+  }
+}
