@@ -31,8 +31,8 @@ get perimeter() {
 // inherited from Polygon.
 class Triangle extends Polygon {
 
-  // Use the get keyword to make a getter method isValid that checks
-  // if the given 3 sides for a triangle is valid.
+  Use the get keyword to make a getter method isValid that checks
+  if the given 3 sides for a triangle is valid.
   get isValid() {
     if (!Array.isArray(this.sides)) return;
     if (this.count !== 3) return;
@@ -47,6 +47,7 @@ class Triangle extends Polygon {
     //with the given side lengths.
     return ((side1 + side2 > side3) && (side1 + side3 > side2) && (side2 + side3 > side1))
   }
+
 }
 
 // Define a Square class that inherits from Polygon.
