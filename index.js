@@ -16,11 +16,11 @@ class Polygon {
 
 class Triangle extends Polygon {
     constructor(sidesArray) {
-            super(sidesArray);
-        }
-        // 3) checks for valid triangle
+        super(sidesArray);
+    }
+
     get isValid() {
-        if (this.triangleHasValidSides()) {
+        if (this.triangleHasValidSides() && this.countSides === 3) {
             return true;
         } else {
             return false;
@@ -28,15 +28,35 @@ class Triangle extends Polygon {
     }
 
     triangleHasValidSides() {
-            return (this.sidesArray[0] + this.sidesArray[1] > this.sidesArray[2] &&
-                this.sidesArray[0] + this.sidesArray[2] > this.sidesArray[1] &&
-                this.sidesArray[1] + this.sidesArray[2] > this.sidesArray[0]);
-        }
-        // 4) has a perimeter getter inherited from Polygon
+        return (this.sidesArray[0] + this.sidesArray[1] > this.sidesArray[2] &&
+            this.sidesArray[0] + this.sidesArray[2] > this.sidesArray[1] &&
+            this.sidesArray[1] + this.sidesArray[2] > this.sidesArray[0]);
+    }
 }
 
-// Square
-// 5) has a Square class
-// 6) has a perimeter getter inherited from Polygon
-// 7) calculates the area
-// 8) checks for valid square
+class Square extends Polygon {
+    constructor(sidesArray) {
+        super(sidesArray);
+    }
+
+    // 7) calculates the area
+    get area() {
+            return this.sidesArray[0] * this.sidesArray[1];
+        }
+        // 8) checks for valid square
+
+    get isValid() {
+        // if sum of sides is even && num sides is 4
+        if (this.squareHasEqualSides() && this.countSides === 4) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    squareHasEqualSides() {
+        return (this.sidesArray[0] === this.sidesArray[1] &&
+            this.sidesArray[0] === this.sidesArray[2] &&
+            this.sidesArray[1] === this.sidesArray[2])
+    }
+}
