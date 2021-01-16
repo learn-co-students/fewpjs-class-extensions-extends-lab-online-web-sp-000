@@ -14,9 +14,6 @@ class Polygon {
 
 
 class Triangle extends Polygon {
-    constructor(sidesArray) {
-        super(sidesArray);
-    }
 
     get isValid() {
         if (this.triangleHasValidSides()) {
@@ -33,9 +30,6 @@ class Triangle extends Polygon {
 }
 
 class Square extends Polygon {
-    constructor(sidesArray) {
-        super(sidesArray);
-    }
 
     get area() {
         return this.sidesArray[0] * this.sidesArray[1];
