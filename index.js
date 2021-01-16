@@ -16,7 +16,7 @@ class Polygon {
 class Triangle extends Polygon {
 
     get isValid() {
-        if (this.triangleHasValidSides()) {
+        if (this.triangleHasValidSides() && this.countSides === 3) {
             return true;
         }
         return false;
@@ -36,7 +36,7 @@ class Square extends Polygon {
     }
 
     get isValid() {
-        if (this.squareHasEqualSides()) {
+        if (this.squareHasEqualSides() && this.countSides === 4) {
             return true;
         }
         return false;
