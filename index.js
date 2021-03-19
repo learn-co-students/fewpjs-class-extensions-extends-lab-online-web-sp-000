@@ -5,6 +5,7 @@
 class Polygon{
   constructor(sides){
     this.sides = sides;
+    this.count = this.sides.length 
   }
 
   //Use the get keyword to make a getter method countSides that
@@ -31,8 +32,8 @@ get perimeter() {
 // inherited from Polygon.
 class Triangle extends Polygon {
 
-  Use the get keyword to make a getter method isValid that checks
-  if the given 3 sides for a triangle is valid.
+  // Use the get keyword to make a getter method isValid that checks
+  // if the given 3 sides for a triangle is valid.
   get isValid() {
     if (!Array.isArray(this.sides)) return;
     if (this.count !== 3) return;
